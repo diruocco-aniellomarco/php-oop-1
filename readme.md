@@ -20,3 +20,7 @@ Facciamo attenzione all’organizzazione del codice, suddividendolo in appositi 
 _Bonus 1:_
 
 Modificare la classe Movie in modo che accetti più di un genere.
+
+_Bonus 2:_
+
+Creare un layout completo per stampare a schermo una lista di movies.

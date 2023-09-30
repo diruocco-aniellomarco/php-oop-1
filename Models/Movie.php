@@ -23,11 +23,12 @@
         $this->titlemovie = $titlemovie;
         $this->minutesmovie = $minutesmovie;
         $this->regia = $regia;
+        //trasformo i minuti del film in "ore e minuti"
         $this->hours = round($this->minutesmovie / 60);
         $this->min = $this->minutesmovie % 60;
         $this->genere = $genere;
     }
-
+    // avendo le ore e i minuti d durata del film, li unisco e li stampo insieme
     public function transformIntoHours() {
        return "$this->hours ore $this->min minuti";
     }

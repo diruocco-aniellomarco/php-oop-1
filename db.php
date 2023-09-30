@@ -3,16 +3,7 @@
 require_once __DIR__ . '/Models/Genre.php';
 require_once __DIR__ . '/Models/Movie.php';
 
-// $new_genre = new Genre(
-//     'horror'
-// );
 
-
-// $new_movie = new Movie(
-//     'La vita è bella',
-//     125,
-//     'horror',
-// );
 $first_gen = new Genre(['Azione', 'Biografico']);
 
 $first_movie = new Movie(
@@ -29,4 +20,9 @@ $second_movie = new Movie(
     new Genre(['Fantasy', 'Noir', 'Azione']),
 );
 
-// var_dump($film);
+
+// metto tutti gli oggetti in un array in modo da poterli stampare
+$movieList = [
+    $first_movie,
+    $second_movie
+];
