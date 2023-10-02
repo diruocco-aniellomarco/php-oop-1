@@ -3,15 +3,7 @@
 require_once __DIR__ . '/db.php';
 
  
-// metodo da usare minuti trasformate in "ore e minuti"
-// 
-// $minuti = 125;
 
-// $ore = round($minuti / 60);
-// $min = $minuti % 60;
-
-// echo $ore;
-// var_dump($min);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +19,7 @@ require_once __DIR__ . '/db.php';
     <div class="container">
         <div class="row mt-5 justify-content-center g-3">
             <!-- stampo tutti i film dell'array "movieList" in delle card -->
-            <?php foreach($movieList as $movie) {?>
+            <!-- <?php foreach($movieList as $movie) {?>
                 <div class="col-3">
                     <div class="card" >
                         <div class="card-header">
@@ -44,7 +36,7 @@ require_once __DIR__ . '/db.php';
                         </div>
                     </div>
                 </div>
-            <?php }?>
+            <?php }?> -->
             
         </div>
     </div>
