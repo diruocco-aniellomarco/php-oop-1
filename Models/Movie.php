@@ -16,7 +16,7 @@
     public function __construct(
         string $title,
         string $trama,
-        Genre $genere,
+        array $genere,
         //attributi unici della classe
         int $published_year,
         int $running_time,
@@ -26,6 +26,11 @@
         $this->running_time = $running_time;
     }
     
+    public function get_Details() {
+        return "
+                
+                ";
+    }
     
  }
 

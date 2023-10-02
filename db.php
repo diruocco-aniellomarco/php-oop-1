@@ -1,40 +1,83 @@
 <?php 
 
+$movies_data = [
+    [   
+        'title' => 'film 1',
+        'trama' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ',
+        'genere' => ['Genere 1', 'Genere 2','Genere 3'],
+        'published_year' => 1990,
+        'running_time' => 90,
+    ],
+    [
+        'title' => 'film 2',
+        'trama' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ',
+        'genere' => ['Genere 4', 'Genere 5','Genere 6'],
+        'published_year' => 2000,
+        'running_time' => 110,
+        ],
+    ];
+
+$serie_list_data = [
+    [
+        'title' => 'Serie 1',
+        'trama' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ',
+        'genere' => ['Genere 1', 'Genere 2'],
+        'aired_from_year' => 1990,
+        'aired_to_year' => 1995,
+        'number_of_episodes' => 50,
+        'number_of_seasons' => 5,
+    ],
+    [
+        'title' => 'Serie 1',
+        'trama' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ',
+        'genere' => ['Genere 1'],
+        'aired_from_year' => 2000,
+        'aired_to_year' => 2008,
+        'number_of_episodes' => 80,
+        'number_of_seasons' => 8,
+    ],
+    ];
+
+
+
+
+
+
 require_once __DIR__ . '/Models/Production.php';
 require_once __DIR__ . '/Models/Genre.php';
 require_once __DIR__ . '/Models/Movie.php';
 require_once __DIR__ . '/Models/TvSerie.php';
 
-$genere = new Genre(['fantasy']);
-$prodotto = new Production('titolo','trama', $genere );
-$film = new Movie ('titolo Film', 'Trama Film', $genere, 1990, 95);
-$serieTv = new TvSerie('titolo Serie tv', 'Trama Serie tv', $genere, 2000, 2005, 56, 5);
 
-var_dump($serieTv);
+foreach($movies_data as $movie_data) {
+    $generi = [];
+    foreach($movie_data['genere'] as $genere_data) {
+        $generi[] = new Genre($genere_data);
+        
+    }
+    
+    $movies[] = new Movie($movie_data['title'], $movie_data['trama'], $generi, $movie_data['published_year'],$movie_data['running_time']);
+}
+
+foreach($serie_list_data as $serie_data) {
+    $generi_serie = [];
+    foreach($serie_data['genere'] as $genere_data) {
+        $generi_serie[] = new Genre($genere_data);
+        
+    }
+    
+    $serieList[] = new TvSerie(
+                    $serie_data['title'], 
+                    $serie_data['trama'], 
+                    $generi_serie, 
+                    $serie_data['aired_from_year'],
+                    $serie_data['aired_to_year'],
+                    $serie_data['number_of_episodes'],
+                    $serie_data['number_of_seasons'],
+                );
+}
 
 
 
 
 
-// $first_gen = new Genre(['Azione', 'Biografico']);
-
-// $first_movie = new Movie(
-//     'American Sniper',
-//     134,
-//     'Clint Eastwood',
-//     $first_gen,
-// );
-
-// $second_movie = new Movie(
-//     'The Batman',
-//     175,
-//     'Matt Reeves',
-//     new Genre(['Fantasy', 'Noir', 'Azione']),
-// );
-
-
-
-// $movieList = [
-//     $first_movie,
-//     $second_movie
-// ];

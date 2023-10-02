@@ -10,7 +10,7 @@
     public $firstgen;
 
     public function __construct(
-        array $firstgen,
+        string $firstgen,
     ) {
         $this->firstgen = $firstgen;
     }

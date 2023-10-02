@@ -19,7 +19,7 @@
     public function __construct(
         string $title,
         string $trama,
-        Genre $genere,
+        array $genere,
 
         //attributi unici della classe
        
@@ -35,7 +35,8 @@
         $this->number_of_seasons = $number_of_seasons;
     }
     // Prendo i dettagli della classe
-    // public function getDetails() {
-    //    return "";
-    // }
+    public function getDetails() {
+       return " <h2><?=  $this->title ?></h2>
+       ";
+    }
  }

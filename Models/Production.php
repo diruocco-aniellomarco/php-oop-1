@@ -14,7 +14,7 @@
     public function __construct(
         string $title,
         string $trama,
-        Genre $genere,
+        array $genere,
     ) {
         $this->title = $title;
         $this->trama = $trama;
