@@ -30,7 +30,7 @@ $serie_list_data = [
     [
         'title' => 'Serie 1',
         'trama' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ',
-        'genere' => ['Genere 1'],
+        'genere' => ['Genere 3'],
         'aired_from_year' => 2000,
         'aired_to_year' => 2008,
         'number_of_episodes' => 80,
@@ -75,9 +75,12 @@ foreach($serie_list_data as $serie_data) {
                     $serie_data['number_of_episodes'],
                     $serie_data['number_of_seasons'],
                 );
+                
 }
+// var_dump($serie_data['genere']);
 
-
-
+foreach($generi_serie as $gen) {
+    var_dump($gen);
+}
 
 

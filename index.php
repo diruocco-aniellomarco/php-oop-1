@@ -31,7 +31,7 @@ require_once __DIR__ . '/db.php';
                             <p>durata: <?=  $movie->published_year ?></p>
                             <p>Trama: <i><?=  $movie->trama ?></i></p>
                            <!--  stampo tutti i generi (sono contenuti in un array) -->
-                           <p>Genere: <?php foreach( $generi as $gen) {?>
+                           <p>Genere: <?php foreach( $movie->genere as $gen) {?>
                                 <span><?= $gen->firstgen.',' ?></span>
                                 <?php }?>
                             </p>
@@ -52,7 +52,7 @@ require_once __DIR__ . '/db.php';
                             <p>Numero totale di stagioni: <?=  $serietv->number_of_seasons ?></p>
                             <p>Trama: <i><?=  $serietv->trama ?></i></p>
                            <!--  stampo tutti i generi (sono contenuti in un array) -->
-                           <p>Genere: <?php foreach( $generi_serie as $gen) {?>
+                           <p>Genere: <?php foreach( $serietv->genere as $gen) {?>
                                 <span><?= $gen->firstgen.',' ?></span>
                                 <?php }?>
                             </p>
